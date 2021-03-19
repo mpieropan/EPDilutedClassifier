@@ -1,4 +1,4 @@
-EPDilutedClassifier is licensed under the MIT License:
+MIT License
 
 Copyright (c) 2021: Mirko Pieropan
 
