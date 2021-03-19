@@ -68,7 +68,7 @@ prior::String="theta_mixture")
     o_new = signflip(o,η)
     ξ.*=o_new
     Γ = SpikeSlabPrior(ρ0,λ0,δρ,δλ)
-    (prior=="theta") && (Λ=ThetaMixturePrior(η0,δη))
+    (prior=="theta") && (Λ=ThetaPrior())
     (prior=="theta_mixture") && (Λ=ThetaMixturePrior(η0,δη))
     P0 = [ [Γ for i=1:N]; [Λ for i=1:M] ]
     if typeof(EPInputState) == Nothing
