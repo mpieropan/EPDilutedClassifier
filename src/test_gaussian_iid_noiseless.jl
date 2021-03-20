@@ -1,7 +1,6 @@
 # EP simulations with i.i.d. patterns and noiseless labels
 
-
-using .EPDilutedClassifier
+using EPDilutedClassifier
 
 N=128; ρ=0.25; α=6.0;
 epsconv=1e-4; maxiter=50000; η=1.0; damp=0.9995;

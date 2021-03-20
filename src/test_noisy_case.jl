@@ -1,6 +1,6 @@
 # EP simulations with i.i.d. and correlated Gaussian patterns and noisy labels
 
-using .EPDilutedClassifier
+using EPDilutedClassifier
 
 N=128; ρ=0.25; α=6.0;
 epsconv=1e-4; maxiter=10000; η=0.95;

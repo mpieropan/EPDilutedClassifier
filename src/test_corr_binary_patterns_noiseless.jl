@@ -1,7 +1,6 @@
 # EP simulations with correlated patterns generated from a recurrent neural network and noiseless labels
 
-using .EPDilutedClassifier
-
+using EPDilutedClassifier
 
 Nperceptrons=128; N=Nperceptrons-1
 ith_perceptron=1
