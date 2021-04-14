@@ -1,7 +1,12 @@
-Code to reproduce the results of the paper "Expectation propagation on the diluted classifier" by Alfredo Braunstein, Thomas Gueudré, Andrea Pagnani and Mirko Pieropan [1].
+Code to reproduce the results of the paper "Expectation propagation on the diluted classifier" by Alfredo Braunstein, Thomas Gueudré, Andrea Pagnani and Mirko Pieropan [1]. This package uses the implementation of Gaussian EP available at [2]. 
 
 ## Installation
-After dowloading the repository, open Julia, change your current directory to that of the repository and type `]` to enter the Pkg REPL. From there, run `activate .` and then  `instantiate` in order to install all required dependencies.
+After dowloading the repository, open Julia, change your current directory to that of the repository and type `]` to enter the Pkg REPL. From there, run `activate .` and then  `instantiate` in order to install all required dependencies. These instructions can be executed automatically at Julia startup by including the following lines of code in the  `~/.julia/config/startup.jl` file (create the `~/.julia/config` folder and the file if not already present):
+
+    using Pkg 
+    if isfile("Project.toml") && isfile("Manifest.toml") 
+        Pkg.activate(".") 
+    end
 
 ## Usage
 The routines needed to perform the EP inference can be found in *`SparsePerceptron.jl`* and in *`run_instances.jl`*. The generative models for the weights of the teacher perceptron and for the training set of patterns are implemented in *`generate_instances.jl`*.
@@ -17,7 +22,7 @@ Some simple tests can be run by including the following scripts in Julia from th
 Each script runs the EP based inference on a randomly generated instance and prints the teacher-student overlap and the related mean squared error in dB (both as the estimation is performed and at the end of the inference procedure).
 
 ## References
-[1] Alfredo Braunstein, Thomas Gueudré, Andrea Pagnani, and Mirko Pieropan. (2021). Expectation propagation on the diluted Bayesian classifier.
-Preprint: https://arxiv.org/abs/2009.09545 (to appear in Physical Review E).
+[1] Alfredo Braunstein, Thomas Gueudré, Andrea Pagnani, and Mirko Pieropan. *Expectation propagation on the diluted Bayesian classifier*.
+Phys. Rev. E [**103** 043301](https://link.aps.org/doi/10.1103/PhysRevE.103.043301) (Apr. 2021).
 
 [2] GaussianEP package: https://github.com/abraunst/GaussianEP
